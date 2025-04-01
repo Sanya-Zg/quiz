@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Quiz</title>
+</head>
+<body>
+    <header class="container">
+        <img src="./images/LOGO.svg" alt="Logotype" class="logo">
+        <nav>
+            <ul>
+                <li class="nav_item"><a href="./index.html">Home</a></li>
+                <li class="nav_item menu_dropdown">
+                    <p class="answer_menu nav_item">Answers</p>
+                    <ul class="dropdown">
+                        <li class="nav_item"><a href="./html-Info.html">Html</a></li>
+                        <li class="nav_item"><a href="./css-info.html">Css</a></li>
+                        <li class="nav_item"><a href="./js-info.html">Js</a></li>
+                        <li class="nav_item"><a href="./acces-info.html">Accessibility</a></li>
+                    </ul>
+                </li>
+                <li class="nav_item"><a href="./quiz.html">Quizzes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="contant html_bg">
+            <h1>Answers for the <span><i>html</i></span> quiz</h1>
+            
+            <h2>💻 <i>What is HTML?</i></h2>
+            <p><strong>HTML (HyperText Markup Language)</strong> is the standard markup language used to create web pages. It defines the structure of a web document using tags.</p>
+            
+            <section>
+                <h2>🏷️ What is the correct structure of an HTML document?</h2>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                        &lt;title&gt;My First Web Page&lt;/title&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;h1&gt;Hello, World!&lt;/h1&gt;
+                        &lt;p&gt;This is my first webpage.&lt;/p&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;</pre>
+            </section>
+    
+            <section>
+                <h2>🏷️ Which HTML element defines the title of a document?</h2>
+                <p>The <code>&lt;title&gt;</code> tag is used to define the name of the web page, which appears in the browser tab.</p>
+                <pre>
+                    &lt;title&gt;My Awesome Website&lt;/title&gt;</pre>
+            </section>
+    
+            <section>
+                <h2>🏷️ What is the purpose of the &lt;body&gt; tag?</h2>
+                <p>The <code>&lt;body&gt;</code> tag contains the main content of a webpage.</p>
+                <pre>
+                    &lt;body&gt;
+                        &lt;h1&gt;Welcome!&lt;/h1&gt;
+                        &lt;p&gt;This is the main content of the webpage.&lt;/p&gt;
+                    &lt;/body&gt;</pre>
+            </section>
+    
+            <section>
+                <h2>🏷️ Which HTML tag is used to create a hyperlink?</h2>
+                <p>To create clickable links, use the <code>&lt;a&gt;</code> (anchor) tag.</p>
+                <pre>
+                    &lt;a href="https://www.google.com"&gt;Go to Google&lt;/a&gt;</pre>
+            </section>
+    
+            <section>
+                <h2>🏷️ Which tag is used to display images in HTML?</h2>
+                <p>To insert an image, use the <code>&lt;img&gt;</code> tag.</p>
+                <pre>
+                    &lt;img src="image.jpg" alt="Description of the image"&gt;</pre>
+            </section>
+    
+            <section>
+                <h2>🏷️ What attribute is used to provide the path of an image?</h2>
+                <p>The <code>src</code> attribute specifies the file path or URL of an image.</p>
+                <pre>
+                    &lt;img src="images/photo.jpg" alt="Mountain view"&gt;</pre>
+            </section>
+    
+            <section>
+                <h2>🏷️ Which HTML tag is used to create an unordered list?</h2>
+                <p>Use the <code>&lt;ul&gt;</code> (unordered list) tag.</p>
+                <pre>
+                    &lt;ul&gt;
+                        &lt;li&gt;Apple&lt;/li&gt;
+                        &lt;li&gt;Banana&lt;/li&gt;
+                        &lt;li&gt;Orange&lt;/li&gt;
+                    &lt;/ul&gt;</pre>
+            </section>
+    
+            <section>
+                <h2>🏷️ Ordered Lists</h2>
+                <p>Use the <code>&lt;ol&gt;</code> (ordered list) tag for numbered lists.</p>
+                <pre>
+                    &lt;ol&gt;
+                        &lt;li&gt;Wake up&lt;/li&gt;
+                        &lt;li&gt;Brush teeth&lt;/li&gt;
+                        &lt;li&gt;Start work&lt;/li&gt;
+                    &lt;/ol&gt;</pre>
+            </section>
+    
+            <section>
+                <h2>🏷️ What does the &lt;br&gt; tag do?</h2>
+                <p>The <code>&lt;br&gt;</code> tag creates a line break.</p>
+                <pre>
+                    &lt;p&gt;This is line one.&lt;br&gt;This is line two.&lt;/p&gt;</pre>
+            </section>
+    
+            <section>
+                <h2>🏷️ What does the &lt;fieldset&gt; tag do?</h2>
+                <p>The <code>&lt;fieldset&gt;</code> tag is used to group related elements inside an HTML form.</p>
+                <pre>
+                    &lt;form&gt;
+                        &lt;fieldset&gt;
+                            &lt;legend&gt;Personal Information&lt;/legend&gt;
+                            &lt;label for="name"&gt;Name:&lt;/label&gt;
+                            &lt;input type="text" id="name"&gt;
+                        &lt;/fieldset&gt;
+                    &lt;/form&gt;</pre>
+            </section>
+    
+        </div>
+    </main>
+    
+    <footer class="footer_cont">
+        <p>&copy; 2025 Maslovskiy. All rights reserved.</p>
+    </footer>
+</body>
+</html>

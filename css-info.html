@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Quiz</title>
+</head>
+<body>
+    <header class="container">
+        <img src="./images/LOGO.svg" alt="Logotype" class="logo">
+        <nav>
+            <ul>
+                <li class="nav_item"><a href="./index.html">Home</a></li>
+                <li class="nav_item menu_dropdown">
+                    <p class="answer_menu nav_item">Answers</p>
+                    <ul class="dropdown">
+                        <li class="nav_item"><a href="./html-Info.html">Html</a></li>
+                        <li class="nav_item"><a href="./css-info.html">Css</a></li>
+                        <li class="nav_item"><a href="./js-info.html">Js</a></li>
+                        <li class="nav_item"><a href="./acces-info.html">Accessibility</a></li>
+                    </ul>
+                </li>
+                <li class="nav_item"><a href="./quiz.html">Quizzes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="contant css_bg">
+            <h1>Answers for the <span><i>css</i></span> quiz</h1>
+            <h2>💻 <i>What is CSS?</i></h2>
+            <p><strong>CSS</strong> is a styling language used to control the appearance and layout of HTML elements on a web page. It allows developers to apply colors, fonts, spacing, animations, and responsive designs to create visually appealing websites.</p>
+    
+            <section>
+                <h2>🏷️ Which HTML attribute is used to define inline styles?</h2>
+                <p>The <code>style</code> attribute is used to define inline styles in HTML.</p>
+                <pre>
+                    &lt;p style="color: blue; font-size: 16px;"&gt;This is a blue text.&lt;/p&gt;</pre>
+            </section>  
+    
+            <section>
+                <h2>🏷️ How do you insert a comment in a CSS file?</h2>
+                <p>CSS comments are written inside <code>/* ... */</code> and are ignored by the browser.</p>
+                <pre>
+                    /* This is a CSS comment */
+                    body {
+                        background-color: lightgray;
+                    }</pre>
+            </section>
+    
+            <section>
+                <h2>🏷️ Which property is used to change the background color of an element?</h2>
+                <p>The <code>background-color</code> property is used to set the background color.</p>
+                <pre>
+                    body {
+                        background-color: yellow;
+                    }</pre>
+            </section>
+    
+            <section>
+                <h2>🏷️ How do you apply a style to all &lt;p&gt; elements?</h2>
+                <p>Use the element selector <code>p</code> in CSS.</p>
+                <pre>
+                    p {
+                        font-size: 18px;
+                        color: black;
+                    }</pre>
+            </section>
+    
+            <section>
+                <h2>🏷️ Which property is used to change the font of an element?</h2>
+                <p>The <code>font-family</code> property defines the font of an element.</p>
+                <pre>
+                    body {
+                        font-family: Arial, sans-serif;
+                    }</pre>
+            </section>
+    
+            <section>
+                <h2>🏷️ How do you make each word in a text start with a capital letter?</h2>
+                <p>Use the <code>text-transform</code> property with the value <code>capitalize</code>.</p>
+                <pre>
+                    p {
+                        text-transform: capitalize;
+                    }</pre>
+            </section>
+    
+            <section>
+                <h2>🏷️ How do you select an element with the class name "header"?</h2>
+                <p>Use a dot (<code>.</code>) before the class name in CSS.</p>
+                <pre>
+                    .header {
+                        background-color: blue;
+                        color: white;
+                        padding: 10px;
+                    }</pre>
+            </section>
+    
+            <section>
+                <h2>🏷️ What is the default value of the "position" property?</h2>
+                <p>The default value of the <code>position</code> property is <code>static</code>, meaning elements appear in the normal document flow.</p>
+                <pre>
+                    div {
+                        position: static;
+                    }</pre>
+            </section>
+    
+            <section>
+                <h2>🏷️ What is the purpose of the z-index property in CSS?</h2>
+                <p>The <code>z-index</code> property controls the stack order of overlapping elements. Higher values appear in front of lower values.</p>
+                <pre>
+                    .box1 {
+                        position: absolute;
+                        z-index: 2;
+                    }
+                
+                    .box2 {
+                        position: absolute;
+                        z-index: 1;
+                    }</pre>
+            </section>
+
+            <section>
+                <h2>🏷️ What does CSS stand for?</h2>
+                <p><strong>CSS (Cascading Style Sheets)</strong> is a language used to style HTML elements. It allows you to control the layout, colors, fonts, and positioning of elements on a web page.</p>
+            </section>
+    
+        </div>
+    </main>
+    <footer class="footer_cont">
+        <p>&copy; 2025 Maslovskiy. All rights reserved.</p>
+    </footer>
+</body>
+</html>

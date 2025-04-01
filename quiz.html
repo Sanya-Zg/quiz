@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Quiz</title>
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    
+    <header class="container">
+        <img src="./images/LOGO.svg" alt="Logotype" class="logo">
+        <nav>
+            <ul>
+                <li class="nav_item"><a href="./index.html">Home</a></li>
+                <li class="nav_item menu_dropdown">
+                  <p class="answer_menu nav_item">Answers</p>
+                  <ul class="dropdown">
+                        <li class="nav_item"><a href="./html-Info.html">Html</a></li>
+                        <li class="nav_item"><a href="./css-info.html">Css</a></li>
+                        <li class="nav_item"><a href="./js-info.html">Js</a></li>
+                        <li class="nav_item"><a href="./acces-info.html">Accessibility</a></li>
+                    </ul>
+                </li>
+                <li class="nav_item"><a href="./quiz.html">Quizzes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main_content contant index_bg">
+        <!-- ------------Welcome block---------------- -->
+              <div class="content__welcome">
+                <div class="d-col ">
+                  <div class="content__welcome-greeting">
+                    <h1 class="headers"><span class="header-thin">Choose a quiz</h1>
+                    
+                  </div>
+                  <div class="content__welcome-nav">
+                    <button class="nav-button" type="button">
+                      <div class="icon_quiz-html"></div>
+                      <p class="title_quiz">HTML</p>
+                    </button>
+                    <button class="nav-button" type="button">
+                      <div class="icon_quiz-css"></div>
+                      <p class="title_quiz">CSS</p>
+                    </button>
+                    <button class="nav-button" type="button">
+                      <div class="icon_quiz-js"></div>
+                      <p class="title_quiz">Javascript</p>
+                    </button>
+                    <button class="nav-button" type="button">
+                      <div class="icon_quiz-access"></div>
+                      <p class="title_quiz">Accessibility</p>
+                    </button>
+                  </div>
+                </div>
+              </div>
+        <!-- ---------Quiz block------------ -->
+              <div class="quiz__main ">
+                <div class="d-col">
+                  <div class="quiz__main-ask">
+                    <div id="ask_element"></div>
+                    <div class="progress_block">
+                      <div class="progress-item"></div>
+                    </div>
+                  </div>
+                  <div class="quiz__main-answer">
+                    <div class="answers">
+                      <div class="answer"></div>
+                      <div class="answer"></div>
+                      <div class="answer"></div>
+                      <div class="answer"></div>
+                    </div>
+                    <button class="answer-submit" id="answer_submit" type="button">Submit Answer</button>
+                    <button class="answer-submit" id="answer_next" type="button">Next Question</button>
+                    <button class="answer-submit" id="answer_check" type="button">Check Result</button>
+                    <p class="err">Please select an answer</p>
+                  </div>
+                </div>
+              </div>
+              <!-- -----------result block------------ -->
+               <div class="result__quiz">
+                <div class="d-col">
+                  <div class="result_quiz-title">
+                    <h2 class="headers"><span class="header-thin">Quiz completed</span></h2>
+                  </div>
+                  <div class="result_quiz-content">
+                    <div class="result_wrap">
+                      <div class="result-title align-i"></div>
+                      <p class="result-title-score">You scored</p>
+                      <p class="result_amount"></p>
+                      <p class="all_amount">out of <span id="total_num"></span></p>
+                    </div>
+                    <button type="button" class="answer-submit" id="play-again">All quizzes</button>
+                  </div>
+                </div>
+               </div>
+            </main>
+
+            <footer class="footer_cont">
+              <p>&copy; 2025 Maslovskiy. All rights reserved.</p>
+            </footer>
+    </body>

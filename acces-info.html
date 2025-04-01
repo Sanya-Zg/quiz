@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Quiz</title>
+</head>
+<body>
+    <header class="container">
+        <img src="./images/LOGO.svg" alt="Logotype" class="logo">
+        <nav>
+            <ul>
+                <li class="nav_item"><a href="./index.html">Home</a></li>
+                <li class="nav_item menu_dropdown">
+                    <p class="answer_menu nav_item">Answers</p>
+                    <ul class="dropdown">
+                        <li class="nav_item"><a href="./html-Info.html">Html</a></li>
+                        <li class="nav_item"><a href="./css-info.html">Css</a></li>
+                        <li class="nav_item"><a href="./js-info.html">Js</a></li>
+                        <li class="nav_item"><a href="./acces-info.html">Accessibility</a></li>
+                    </ul>
+                </li>
+                <li class="nav_item"><a href="./quiz.html">Quizzes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="contant access_bg">
+            <h1> Answers for the <span><i>accessability</i></span> quiz</h1>
+
+            <h2>💻 <i>What does accessability stand for?</i></h2>
+            <p>Accessibility refers to designing websites and applications so that everyone, including people with disabilities, can use them effectively.</p>
+
+            <section>
+                <h2>🏷️ What does 'WCAG' stand for?</h2>
+                <p>WCAG stands for <strong>Web Content Accessibility Guidelines</strong>. These guidelines are a set of recommendations to make web content more accessible, especially for people with disabilities. They focus on making web content perceivable, operable, understandable, and robust for all users.</p>
+                <p class="no-code">Example (no code needed): WCAG provides guidelines, such as ensuring color contrast and making content navigable with the keyboard.</p>
+            </section>
+    
+            <section>
+                <h2>🏷️ Which element is used to provide alternative text for images for screen reader users?</h2>
+                <p>The <code>&lt;img&gt;</code> element is used to embed images in web pages. The <code>alt</code> attribute within the <code>&lt;img&gt;</code> tag provides alternative text for screen readers. This allows users with visual impairments to understand the content of images by reading the description of the image instead of viewing it.</p>
+                <pre>
+                    &lt;img src="logo.png" alt="Company Logo"&gt;</pre>
+                <p class="example">Here, if a user is using a screen reader, the alternative text "Company Logo" will be read aloud instead of the image.</p>
+            </section>
+    
+            <section>
+                <h2>🏷️ What does ARIA stand for in web development?</h2>
+                <p>ARIA stands for <strong>Accessible Rich Internet Applications</strong>. It is a set of attributes that can be added to HTML elements to improve the accessibility of dynamic content and complex user interface controls. ARIA helps assistive technologies understand the role, state, and properties of user interface elements.</p>
+                <pre>
+                    &lt;button aria-label="Close" onclick="closeWindow()"&gt;X&lt;/button&gt;</pre>
+                <p class="example">In this example, the <code>aria-label</code> attribute provides a description of the button's function, helping screen reader users understand its purpose.</p>
+            </section>
+    
+            <section>
+                <h2>🏷️ Which of the following is not a principle of the WCAG?</h2>
+                <p>The four key principles of WCAG are:</p>
+                <ul>
+                    <li><strong>Perceivable:</strong> Users must be able to perceive the information presented.</li>
+                    <li><strong>Operable:</strong> Users must be able to interact with the content.</li>
+                    <li><strong>Understandable:</strong> Content must be clear and understandable.</li>
+                    <li><strong>Robust:</strong> Content must be compatible with current and future technologies.</li>
+                </ul>
+                <p class="no-code">Example (no code needed): WCAG defines these principles for making content more accessible.</p>
+            </section>
+    
+            <section>
+                <h2>🏷️ Which of these color contrast ratios defines the minimum WCAG 2.1 Level AA requirement for normal text?</h2>
+                <p>The WCAG 2.1 Level AA requirement for normal text is a contrast ratio of at least 4.5:1 between text and its background. This ensures that users with visual impairments, such as color blindness, can read the text clearly.</p>
+                <pre>
+                    body {
+                        color: #333333;
+                        background-color: #ffffff;
+                    }</pre>
+                <p class="example">The contrast ratio between dark gray text (<code>#333333</code>) and a white background (<code>#ffffff</code>) must meet the 4.5:1 requirement.</p>
+            </section>
+    
+            <section>
+                <h2>🏷️ Which of the following elements is inherently focusable, meaning it can receive focus without a 'tabindex' attribute?</h2>
+                <p>Elements that are inherently focusable include interactive HTML elements such as:</p>
+                <ul>
+                    <li><code>&lt;a&gt;</code> (anchor tags with an href attribute)</li>
+                    <li><code>&lt;button&gt;</code></li>
+                    <li><code>&lt;input&gt;</code></li>
+                    <li><code>&lt;textarea&gt;</code></li>
+                </ul>
+                <pre>
+                    &lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;</pre>
+                <p class="example">The <code>&lt;a&gt;</code> tag is inherently focusable and can receive focus when navigating through a page using the keyboard.</p>
+            </section>
+    
+            <section>
+                <h2>🏷️ What is the purpose of the 'lang' attribute in an HTML page?</h2>
+                <p>The <code>lang</code> attribute in HTML specifies the language of the content on the page. It helps assistive technologies, such as screen readers, correctly interpret and read the content aloud in the appropriate language.</p>
+                <pre>
+                    &lt;html lang="en"&gt;
+                        &lt;head&gt;
+                            &lt;title&gt;Accessible Page&lt;/title&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                            &lt;p&gt;Welcome to the accessible web page!&lt;/p&gt;
+                        &lt;/body&gt;
+                    &lt;/html&gt;</pre>
+                <p class="example">Here, the <code>lang="en"</code> attribute specifies that the page's content is in English, helping screen readers use the correct pronunciation.</p>
+            </section>
+    
+            <section>
+                <h2>🏷️ Which guideline ensures that content is accessible by keyboard as well as by mouse?</h2>
+                <p>The operable principle of WCAG ensures that all content and functionality are accessible via keyboard, not just through mouse interaction. This principle ensures that users who cannot use a mouse can still navigate and interact with the content using only the keyboard.</p>
+                <pre>
+                    &lt;button onclick="alert('Button clicked!')"&gt;Click Me&lt;/button&gt;</pre>
+                <p class="example">This button can be operated with both the mouse (by clicking) and the keyboard (by pressing the 'Enter' or 'Space' key).</p>
+            </section>
+    
+            <section>
+                <h2>🏷️ What is the role of 'skip navigation' links in web accessibility?</h2>
+                <p>Skip navigation links provide a way for users, especially those using screen readers or keyboard navigation, to skip repetitive navigation menus and jump directly to the main content of the page. This is particularly helpful for improving the efficiency of navigation for users with disabilities.</p>
+                <pre>
+                    &lt;a href="#maincontent" class="skip-link"&gt;Skip to main content&lt;/a&gt;</pre>
+                <p class="example">In this example, the "Skip to main content" link allows keyboard and screen reader users to bypass the navigation and go straight to the primary content.</p>
+            </section>
+    
+            <section>
+                <h2>🏷️ Which of these tools can help in checking the accessibility of a website?</h2>
+                <p>There are several tools available for checking the accessibility of a website:</p>
+                <ul>
+                    <li>WAVE (Web Accessibility Evaluation Tool)</li>
+                    <li>Lighthouse</li>
+                    <li>Axe</li>
+                </ul>
+                <p class="no-code">These tools can help identify potential barriers and provide suggestions for improving accessibility to ensure websites are usable by all.</p>
+            </section>
+        </div>
+        
+        <footer class="footer_cont">
+            <p>&copy; 2025 Maslovskiy. All rights reserved.</p>
+        </footer>
+    </main>
+    </body>

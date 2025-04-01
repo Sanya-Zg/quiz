@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Quiz</title>
+</head>
+<body>
+    <header class="container">
+        <img src="./images/LOGO.svg" alt="Logotype" class="logo">
+        <nav>
+            <ul>
+                <li class="nav_item"><a href="./index.html">Home</a></li>
+                <li class="nav_item menu_dropdown">
+                    <p class="answer_menu nav_item">Answers</p>
+                    <ul class="dropdown">
+                        <li class="nav_item"><a href="./html-Info.html">Html</a></li>
+                        <li class="nav_item"><a href="./css-info.html">Css</a></li>
+                        <li class="nav_item"><a href="./js-info.html">Js</a></li>
+                        <li class="nav_item"><a href="./acces-info.html">Accessibility</a></li>
+                    </ul>
+                </li>
+                <li class="nav_item"><a href="./quiz.html">Quizzes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="contant js_bg">
+            <h1>Answers for the <span><i>javascript</i></span> quiz</h1>
+
+            <h2>💻 <i>What is JavaScript?</i></h2>
+            <p><strong>JavaScript (JS) </strong>is a high-level, dynamic programming language used primarily for creating interactive web pages. It allows developers to add interactivity, animations, and complex functionality to websites.</p>
+            
+            <section>
+                <h2>🏷️ Which syntax is correct to output 'Hello World' in an alert box?</h2>
+                <p>In JavaScript, the <code>alert()</code> function is used to display a pop-up message. To output "Hello World", you can use the following syntax:</p>
+                <pre>
+                    alert("Hello World");</pre>
+                <p>This will create a pop-up box showing the message "Hello World".</p>
+            </section>
+                
+            <section>   
+                <h2>🏷️ How do you call a function named 'myFunction'?</h2>
+                <p>To call a function in JavaScript, you simply use the function's name followed by parentheses. In the case of a function named <code>myFunction</code>, you call it like this:</p>
+                <pre>
+                myFunction();</pre>
+                <p>If the function accepts parameters, you pass the arguments inside the parentheses.</p>
+            </section>
+            
+            <section>
+                <h2>🏷️ How to write an IF statement in JavaScript?</h2>
+                <p>An <code>IF</code> statement is used to execute a block of code if a specified condition is true. The basic syntax looks like this:</p>
+                <pre>
+                if (condition) {
+                // Code to execute if condition is true
+                }</pre>
+                <p>For example:</p>
+                <pre>
+                    if (x > 5) {
+                    console.log("x is greater than 5");
+                    }</pre>
+            </section>
+                
+            <section>
+                <h2>🏷️ How to write an IF statement for executing some code if 'i' is NOT equal to 5?</h2>
+                <p>To check if a variable <code>i</code> is <strong>NOT</strong> equal to 5, you use the <code>!==</code> operator. Here's the syntax:</p>
+                <pre>
+                    if (i !== 5) {
+                    // Code to execute if i is NOT equal to 5
+                    }</pre>
+                <p>The <code>!==</code> operator checks for inequality (both value and type).</p>
+            </section>
+        
+            <section>
+                <h2>🏷️ How does a FOR loop start?</h2>
+                <p>A <code>FOR</code> loop is used to run a block of code a specific number of times. Here's the syntax to start a basic <code>FOR</code> loop:</p>
+                <pre>
+                    for (let i = 0; i < 10; i++) {
+                        // Code to execute
+                    }</pre>
+                <p>In this example:</p>
+                <ul>
+                    <li><code>let i = 0</code> initializes the loop counter.</li>
+                    <li><code>i < 10</code> is the condition that must be true for the loop to continue.</li>
+                    <li><code>i++</code> increments the counter after each iteration.</li>
+                </ul>
+            </section>
+    
+            <section>
+                <h2>🏷️ How can you add a single-line comment in JavaScript?</h2>
+                <p>In JavaScript, single-line comments are added by using two forward slashes (<code>//</code>). Everything after <code>//</code> on that line will be ignored by the JavaScript engine. For example:</p>
+                <pre>
+                    // This is a single-line comment</pre>
+            </section>
+                
+            <section>
+                <h2>🏷️ What is the correct way to write a JavaScript array?</h2>
+                <p>Arrays in JavaScript are written with square brackets <code>[]</code>. You can define an array and populate it with elements separated by commas. Here's the syntax:</p>
+                <pre>
+                    let fruits = ["apple", "banana", "cherry"];</pre>
+                <p>This defines an array named <code>fruits</code> with three elements.</p>
+            </section>
+                
+            <section>
+                <h2>🏷️ How do you find the number with the highest value of x and y?</h2>
+                <p>To find the highest number between two variables <code>x</code> and <code>y</code>, you can use the <code>Math.max()</code> function:</p>
+                <pre>
+                    let highest = Math.max(x, y);</pre>
+                <p><code>Math.max()</code> returns the largest of the numbers provided as arguments.</p>
+            </section>
+                
+            <section>
+                <h2>🏷️ Which operator is used to assign a value to a variable?</h2>
+                <p>In JavaScript, the assignment operator <code>=</code> is used to assign a value to a variable. Here's an example:</p>
+                <pre>
+                    let x = 10; // Assigns the value 10 to the variable x</pre>
+            </section>
+                
+            <section>
+                <h2>🏷️ What is the correct way to write a JavaScript object?</h2>
+                <p>A JavaScript object is written using curly braces <code>{}</code> and consists of key-value pairs. The keys are strings (or symbols), and the values can be any valid JavaScript data type. Here's an example:</p>
+                <pre>
+                    let person = {
+                    name: "John",
+                    age: 30,
+                    country: "USA"
+                    };</pre>
+                <p>In this example, the object <code>person</code> contains three key-value pairs: <code>name</code>, <code>age</code>, and <code>country</code>.</p>
+            </section>
+                
+        </div>
+
+        <footer class="footer_cont">
+            <p>&copy; 2025 Maslovskiy. All rights reserved.</p>
+        </footer>
+    </main>
+    </body>
+    </html>
