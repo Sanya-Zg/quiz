@@ -6,27 +6,35 @@
     <link rel="stylesheet" href="./styles.css">
     <title>Quiz</title>
     <script src="./script.js" defer></script>
+    <script src="./fetch.js" defer></script>
 </head>
 <body>
+  <header class="container">
+    <a href="./index.html"><img src="./images/LOGO.svg" alt="Logotype" class="logo"></a>
     
-    <header class="container">
-        <img src="./images/LOGO.svg" alt="Logotype" class="logo">
-        <nav>
-            <ul>
-                <li class="nav_item"><a href="./index.html">Home</a></li>
-                <li class="nav_item menu_dropdown">
-                  <p class="answer_menu nav_item">Answers</p>
-                  <ul class="dropdown">
-                        <li class="nav_item"><a href="./html-Info.html">Html</a></li>
-                        <li class="nav_item"><a href="./css-info.html">Css</a></li>
-                        <li class="nav_item"><a href="./js-info.html">Js</a></li>
-                        <li class="nav_item"><a href="./acces-info.html">Accessibility</a></li>
-                    </ul>
-                </li>
-                <li class="nav_item"><a href="./quiz.html">Quizzes</a></li>
-            </ul>
-        </nav>
-    </header>
+    <button class="burger-menu" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    
+    <nav class="nav" role="navigation" aria-label="Main Navigation">
+        <ul>
+            <li class="nav_item"><a href="./index.html">Home</a></li>
+            <li class="nav_item menu_dropdown">
+                <p class="answer_menu nav_item" tabindex="0" role="button" aria-expanded="false" aria-controls="dropdown-menu" aria-haspopup="true">Answers</p>
+                
+                <ul class="dropdown" id="dropdown-menu" role="menu">
+                    <li class="nav_item" tabindex="0"><a href="./html-Info.html">Html</a></li>
+                    <li class="nav_item" tabindex="0"><a href="./css-info.html">Css</a></li>
+                    <li class="nav_item" tabindex="0"><a href="./js-info.html">Js</a></li>
+                    <li class="nav_item" tabindex="0"><a href="./acces-info.html">Accessibility</a></li>
+                </ul>
+            </li>
+            <li class="nav_item"><a href="./quiz.html">Quizzes</a></li>
+        </ul>
+    </nav>
+</header>
     <main class="main_content contant index_bg">
         <!-- ------------Welcome block---------------- -->
               <div class="content__welcome">
@@ -70,7 +78,7 @@
                       <div class="answer"></div>
                       <div class="answer"></div>
                       <div class="answer"></div>
-                    </div>
+                  </div>
                     <button class="answer-submit" id="answer_submit" type="button">Submit Answer</button>
                     <button class="answer-submit" id="answer_next" type="button">Next Question</button>
                     <button class="answer-submit" id="answer_check" type="button">Check Result</button>

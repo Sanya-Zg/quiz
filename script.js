@@ -1,163 +1,102 @@
-const allbtns = document.querySelectorAll('.nav-button');
-const blockWelcome = document.querySelector('.content__welcome');
-const blockQuiz = document.querySelector('.quiz__main');
-const blockResult = document.querySelector('.result__quiz');
-const askElement = document.getElementById('ask_element');
-const progressItem = document.querySelector('.progress-item');
-const answerItems = document.querySelectorAll('.answer');
-const submitAnswer = document.getElementById('answer_submit');
-const nextAnswer = document.getElementById('answer_next');
-const checkResult = document.getElementById('answer_check');
-const playAgain = document.getElementById('play-again');
-const err = document.querySelector('.err');
-const resultTitle = document.querySelector('.result-title');
-const totalNum = document.getElementById('total_num');
 
-let data;
-let currentQuestion = 0;
-let currentIndex;
-let countOfQuestions;
-let correctAnswers = 0;
 
-function progress(currentQuestion, countOfQuestions) {
-    let progress = (currentQuestion + 1) / countOfQuestions * 100;
-    progressItem.style.width = progress + '%';
-}
-
-function questionFunc(ind, num, curr) {
-    const questionNum = document.createElement('p');
-    const questionEl = document.createElement('p');
-    questionNum.classList.add('italic_p');
-    questionEl.classList.add('question');
-    questionNum.textContent = `Question ${curr + 1} of ${num}`;
-    questionEl.textContent = data.quizzes[ind].questions[curr].question;
-    askElement.innerHTML = '';
-
-    answerItems.forEach((element, indexItem) => {
-        element.style.pointerEvents = 'auto';
-        element.innerHTML = '';
-        element.classList.remove('green-border', 'red-border', 'purple-border', 'selected');
-        
-        const alphabet = "ABCD";
-        const alphList = document.createElement('div');
-        const answerA = document.createElement('p');
-        alphList.classList.add('v-a');
-        alphList.textContent = alphabet[indexItem];
-        answerA.setAttribute('data-answerCorrect', data.quizzes[ind].questions[curr].options[indexItem] === data.quizzes[ind].questions[curr].answer);
-        answerA.textContent = data.quizzes[ind].questions[curr].options[indexItem];
-        element.append(alphList, answerA);
-        
-        element.onclick = null;
-        element.addEventListener('click', () => handleAnswerClick(element, answerA));
+    // Burger menu toggle
+    document.querySelector(".burger-menu").addEventListener("click", function() {
+        document.querySelector(".nav").classList.toggle("active");
+        document.querySelector('.contant').classList.toggle('mt');
     });
-    askElement.append(questionNum, questionEl);
-}
 
-function handleAnswerClick(itemEl, ans) {
-    answerItems.forEach(el => {
-        el.classList.remove('selected', 'green-border', 'red-border', 'purple-border');
-        el.style.pointerEvents = 'none';
-    });
-    itemEl.classList.add('selected', 'purple-border');
-    itemEl.querySelector('div').classList.add('purple-ground');
-}
-
-function nextQuestion() {
-    currentQuestion++;
-    progress(currentQuestion, countOfQuestions);
-    if (currentQuestion < countOfQuestions) {
-        questionFunc(currentIndex, countOfQuestions, currentQuestion);
-        submitAnswer.style.display = 'block';
-        nextAnswer.style.display = 'none';
-    } else {
-        nextAnswer.style.display = 'none';
-        checkResult.style.display = 'block';
-    }
-}
-
-function showResult() {
-    blockQuiz.style.display = 'none';
-    blockResult.style.display = 'block';
-    document.querySelector('.result_amount').textContent = correctAnswers;
-    let resP = quizTheme.querySelector('p').cloneNode(true);
-    let resImg = quizTheme.querySelector('img').cloneNode(true);
-    resultTitle.innerHTML = '';
-    resultTitle.append(resImg, resP);
-}
-
-function checkAnswer() {
-    const choosedEl = document.querySelector('.selected');
-    if (!choosedEl) {
-        err.style.visibility = 'visible';
-        return;
-    }
-    err.style.visibility = 'hidden';
+    const answerMenu = document.querySelector(".answer_menu");
+    const dropdown = document.querySelector(".dropdown");
     
-    const correctEl = Array.from(answerItems).find(elem => elem.querySelector('p').getAttribute('data-answerCorrect') === 'true');
-    let divGround = choosedEl.querySelector('div');
-    choosedEl.classList.remove('purple-border');
-    divGround.classList.remove('purple-ground');
-    const imgIcon = document.createElement('img');
-
-    if (choosedEl.querySelector('p').getAttribute('data-answerCorrect') === "true") {
-        choosedEl.classList.add('green-border');
-        imgIcon.src = './images/icon-correct.svg';
-        imgIcon.classList.add('correct-img');
-        choosedEl.append(imgIcon);
-        divGround.classList.add('green-ground');
-        correctAnswers++;
-    } else {
-        choosedEl.classList.add('red-border');
-        imgIcon.src = './images/icon-incorrect.svg';
-        imgIcon.classList.add('incorrect-img');
-        choosedEl.append(imgIcon);
-        choosedEl.querySelector('div').classList.add('red-ground');
-        const imgIconGreen = document.createElement('img');
-        imgIconGreen.src = './images/icon-correct.svg';
-        imgIconGreen.classList.add('correct-img');
-        correctEl.append(imgIconGreen);
-    }
-
-    if (currentQuestion < countOfQuestions - 1) {
-        submitAnswer.style.display = 'none';
-        nextAnswer.style.display = 'block';
-    } else {
-        nextAnswer.style.display = 'none';
-        submitAnswer.style.display = 'none';
-        checkResult.style.display = 'block';
-    }
-}
-
-function restartQuiz() {
-    blockResult.style.display = 'none';
-    blockWelcome.style.display = 'block';
-    checkResult.style.display = 'none';
-    submitAnswer.style.display = 'block';
-    quizTheme.style.visibility = 'hidden';
-}
-
-fetch('./data.json')
-    .then(response => response.json())
-    .then(jsonData => {
-        data = jsonData;
+    // Open/close menu
+    function toggleMenu() {
+        const isExpanded = answerMenu.getAttribute("aria-expanded") === "true";
+        answerMenu.setAttribute("aria-expanded", !isExpanded);
+        dropdown.style.display = isExpanded ? "none" : "block";
         
-        allbtns.forEach((el, index) => {
-            el.addEventListener('click', () => {
-                currentIndex = index;
-                blockWelcome.style.display = 'none';
-                blockQuiz.style.display = 'block';
-                countOfQuestions = data.quizzes[index].questions.length;
-                totalNum.textContent = countOfQuestions;
-                currentQuestion = 0;
-                correctAnswers = 0;
-                questionFunc(index, countOfQuestions, currentQuestion);
-                progress(currentQuestion, countOfQuestions);
-            });
+        if (!isExpanded) {
+            // Move focus to the first menu item
+            const firstItem = dropdown.querySelector("a");
+            if (firstItem) firstItem.focus();
+        }
+    }
+    
+    // Close the menu and return focus to the button
+    function closeMenu() {
+        answerMenu.setAttribute("aria-expanded", "false");
+        dropdown.style.display = "none";
+        answerMenu.focus(); 
+    }
+    
+    // Click and key handler
+    answerMenu.addEventListener("click", toggleMenu);
+    answerMenu.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            toggleMenu();
+        } else if (e.key === "ArrowDown" && dropdown.style.display === "block") {
+            e.preventDefault();
+            const firstItem = dropdown.querySelector("a");
+            if (firstItem) firstItem.focus();
+        }
+    });
+    
+    // Close when pressing Escape
+    dropdown.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            closeMenu();
+        } 
+        // Navigation with arrows inside the menu
+        else if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+            e.preventDefault();
+            const items = Array.from(dropdown.querySelectorAll("a"));
+            const currentIndex = items.indexOf(document.activeElement);
+            let nextIndex;
+            
+            if (e.key === "ArrowDown") {
+                nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0;
+            } else {
+                nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1;
+            }
+            
+            items[nextIndex].focus();
+        }
+    });
+    
+    // Close when clicked outside the menu
+    document.addEventListener("click", (e) => {
+        if (!e.target.closest(".menu_dropdown")) {
+            closeMenu();
+        }
+    });
+
+    const answers = document.querySelectorAll('.answer');
+    const submitButton = document.getElementById('answer_submit');
+
+    answers.forEach(answer => {
+        answer.setAttribute('role', 'button');
+        answer.setAttribute('tabindex', '0');
+
+        answer.addEventListener('click', () => {
+            selectAnswer(answer);
+            submitButton.focus(); 
         });
-        
-        nextAnswer.addEventListener('click', nextQuestion);
-        checkResult.addEventListener('click', showResult);
-        submitAnswer.addEventListener('click', checkAnswer);
-        playAgain.addEventListener('click', restartQuiz);
-    })
-    .catch(error => console.log("EEERRROOOORRR!!"));
+
+        answer.addEventListener('keydown', (event) => {
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                selectAnswer(answer);
+                submitButton.focus();
+            }
+        });
+    });
+
+    function selectAnswer(selected) {
+        answers.forEach(el => {
+            el.classList.remove('selected');
+            el.setAttribute('aria-selected', 'false');
+        });
+        selected.classList.add('selected');
+        selected.setAttribute('aria-selected', 'true');
+    }
