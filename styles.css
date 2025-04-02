@@ -63,7 +63,7 @@ p{
     color: #a729f5;
 }
 button,
-a {
+a,.answer{
     -webkit-tap-highlight-color: transparent;
 }
 

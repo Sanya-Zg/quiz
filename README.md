@@ -1,6 +1,6 @@
 
 # Quiz  
-#### Video Demo: [<URL HERE>](https://youtu.be/7qwgCl0hK6I)  
+#### Video Demo: [https://youtu.be/7qwgCl0hK6I](https://youtu.be/7qwgCl0hK6I)
 #### Description:  
 
 This is an interactive web quiz that allows users to test their knowledge in various categories. Currently, it includes HTML, CSS, JS, and Accessibility, but the number of categories can be expanded—this is just a short demonstration. The project is built using web technologies and has a simple, intuitive interface. The main goal of this quiz is to make learning fun and engaging.  
@@ -12,7 +12,7 @@ All data is retrieved from a `.json` file using the `fetch()` function.
 
 ## Demo  
 You can test the application at:  
-👉 ![Quiz](https://sanya-zg.github.io/quiz/index.html)  
+[https://sanya-zg.github.io/quiz/index.html](https://sanya-zg.github.io/quiz/index.html)
 
 ## Main Features  
 - Selection of different question categories.  
